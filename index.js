@@ -8,6 +8,7 @@ exports.compileTypeRocketAssets = function( public ) {
 	typerocket_elixir(function(mix) {
 		// Directories
 		var assets = typerocket_elixir.config.publicPath;
+		var resource = typerocket_elixir.config.assetsPath;
 
 		// TypeRocket Core Assets
 		mix.coffee([
@@ -24,22 +25,15 @@ exports.compileTypeRocketAssets = function( public ) {
 		], assets + '/typerocket/js/core.js' );
 		mix.sass('typerocket.scss', assets + '/typerocket/css/core.css' );
 
-		// Move Fonts
-		mix.copy(
-			typerocket_elixir.config.assetsPath + '/fonts',
-			assets + '/typerocket/fonts'
-		);
+		// Move Fonts and JS
+		gulp.src( resource + '/fonts/*.{ttf,woff,eof,eot,svg}' )
+			.pipe( gulp.dest( assets + '/typerocket/fonts') );
 
-		// Move JS
-		mix.copy(
-			typerocket_elixir.config.assetsPath + '/js/global.js',
-			assets + '/typerocket/js/global.js'
-		);
+		gulp.src( resource + '/js/global.js' )
+			.pipe( gulp.dest( assets + '/typerocket/js' ) );
 
-		mix.copy(
-			typerocket_elixir.config.assetsPath + '/js/redactor.min.js',
-			assets + '/typerocket/js/redactor.min.js'
-		);
+		gulp.src( resource + '/js/redactor.min.js' )
+			.pipe( gulp.dest( assets + '/typerocket/js' ) );
 
 	});
 };
