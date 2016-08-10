@@ -24,9 +24,21 @@ exports.compileTypeRocketAssets = function( public ) {
 		], assets + '/typerocket/js/core.js' );
 		mix.sass('typerocket.scss', assets + '/typerocket/css/core.css' );
 
+		// Move Fonts
 		mix.copy(
 			typerocket_elixir.config.assetsPath + '/fonts',
 			assets + '/typerocket/fonts'
+		);
+
+		// Move JS
+		mix.copy(
+			typerocket_elixir.config.assetsPath + '/js/global.js',
+			assets + '/typerocket/js/global.js'
+		);
+
+		mix.copy(
+			typerocket_elixir.config.assetsPath + '/js/redactor.min.js',
+			assets + '/typerocket/js/redactor.min.js'
 		);
 
 	});
