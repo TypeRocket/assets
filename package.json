@@ -1,6 +1,6 @@
 {
   "name": "typerocket-assets",
-  "version": "3.0.0-15",
+  "version": "3.0.0-16",
   "description": "TypeRocket Core Assets",
   "main": "index.js",
   "scripts": {
@@ -12,8 +12,7 @@
   },
   "dependencies": {
     "gulp": "~3.9",
-    "laravel-elixir-coffeescript": "^1.0.2",
-    "laravel-elixir": "^6.0.0-9"
+    "laravel-elixir": "^5.0.0",
   },
   "author": "Robojuice",
   "license": "MIT",
