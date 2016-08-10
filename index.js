@@ -4,7 +4,7 @@ exports.compileTypeRocketAssets = function( public ) {
 
 	var originalAssets = typerocket_elixir.config.assetsPath;
 	var originalPublic = typerocket_elixir.config.publicPath;
-	var originalMaps = typerocket_elixir.config.sourcemaps ;
+	var originalMaps = typerocket_elixir.config.sourcemaps;
 
 	typerocket_elixir.config.assetsPath = __dirname + '/assets';
 	typerocket_elixir.config.publicPath = public;
