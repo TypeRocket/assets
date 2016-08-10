@@ -1,29 +1,33 @@
 exports.compileTypeRocketAssets = function( public ) {
-	var elixir = require('laravel-elixir');
+	var typerocket_elixir = require('laravel-elixir');
 
-	elixir.config.assetsPath = './assets';
-	elixir.config.publicPath = public;
-	elixir.config.sourcemaps = false;
+	typerocket_elixir.config.assetsPath = __dirname + '/assets';
+	typerocket_elixir.config.publicPath = public;
+	typerocket_elixir.config.sourcemaps = false;
 
-	elixir(function(mix) {
-	    // Directories
-	    var assets = elixir.config.publicPath;
+	typerocket_elixir(function(mix) {
+		// Directories
+		var assets = typerocket_elixir.config.publicPath;
 
-	    // TypeRocket Core Assets
-	    mix.coffee([
-	        'http.coffee',
-	        'booyah.coffee',
-	        'typerocket.coffee',
-	        'items.coffee',
-	        'media.coffee',
-	        'matrix.coffee',
-	        'builder.coffee',
-	        'seo.coffee',
-	        'link.coffee',
-	        'dev.coffee'
-	    ], assets + '/typerocket/js/core.js' );
-	    mix.sass('typerocket.scss', assets + '/typerocket/css/core.css' );
+		// TypeRocket Core Assets
+		mix.coffee([
+			'http.coffee',
+			'booyah.coffee',
+			'typerocket.coffee',
+			'items.coffee',
+			'media.coffee',
+			'matrix.coffee',
+			'builder.coffee',
+			'seo.coffee',
+			'link.coffee',
+			'dev.coffee'
+		], assets + '/typerocket/js/core.js' );
+		mix.sass('typerocket.scss', assets + '/typerocket/css/core.css' );
+
+		mix.copy(
+			typerocket_elixir.config.assetsPath + '/fonts',
+			assets + '/typerocket/fonts'
+		);
 
 	});
-}
-
+};
