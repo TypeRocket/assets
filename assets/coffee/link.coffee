@@ -13,7 +13,12 @@ jQuery.fn.TypeRocketLink = (type = 'any', taxonomy = '') ->
       that.next().next().next().append '<li class="tr-link-search-result-title">Results'
       for item in data
         if item.post_title
-          title = item.post_title + ' (' + item.post_type + ')'
+          if item.post_status == 'draft'
+            post_status = 'draft '
+          else
+            post_status = ''
+
+          title = item.post_title + ' (' + post_status + item.post_type + ')'
           id = item.ID
         else
           title = item.name
