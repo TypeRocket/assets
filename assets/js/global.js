@@ -2,5 +2,5 @@
   httpCallbacks: [],
   repeaterCallbacks: [],
   lastSubmittedForm: false,
-  redactorSettings: {formatting: ['p']}
+  redactorSettings: {}
 };
