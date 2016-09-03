@@ -16,17 +16,17 @@ exports.compileTypeRocketAssets = function( public ) {
 		var resource = typerocket_elixir.config.assetsPath;
 
 		// TypeRocket Core Assets
-		mix.coffee([
-			'http.coffee',
-			'booyah.coffee',
-			'typerocket.coffee',
-			'items.coffee',
-			'media.coffee',
-			'matrix.coffee',
-			'builder.coffee',
-			'seo.coffee',
-			'link.coffee',
-			'dev.coffee'
+		mix.scripts([
+			'http.js',
+			'booyah.js',
+			'typerocket.js',
+			'items.js',
+			'media.js',
+			'matrix.js',
+			'builder.js',
+			'seo.js',
+			'link.js',
+			'dev.js'
 		], assets + '/typerocket/js/core.js' );
 		mix.sass('typerocket.scss', assets + '/typerocket/css/core.css' );
 
