@@ -1,0 +1,88 @@
+/* Images and Files */
+.typerocket-container .data-full,
+.typerocket-container .data-full li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.typerocket-container .image-picker-placeholder img,
+.typerocket-container .file-picker-placeholder a {
+    padding: 10px;
+    border: solid #DFDFDF 1px;
+    background: #fff;
+    margin-top: 10px;
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Gallery */
+.typerocket-container .tr-gallery-list .image-picker-placeholder img {
+    cursor: move;
+}
+
+.tr-gallery-list {
+    margin: 5px -5px 0;
+}
+
+.typerocket-container .tr-gallery-list li {
+    margin: 5px;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.typerocket-container .tr-gallery-list li img {
+    margin: 0;
+    display: block;
+}
+
+.tr-gallery-list li:hover a {
+    display: block;
+}
+
+.tr-gallery-list a,
+.tr-gallery-list a:before {
+    font-family: 'typerocket-icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 16px;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.tr-gallery-list a {
+    color: #A00;
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    z-index: 5;
+    text-decoration: none;
+    border: solid #DFDFDF 1px;
+    padding: 6px;
+    border-radius: 25px;
+    background: #fff;
+    display: none;
+}
+
+.tr-gallery-list a:hover {
+    color: #f00;
+    cursor: pointer;
+}
+
+.typerocket-container .tr-gallery-list .ui-sortable-helper a {
+    display: none;
+}
+
+.tr-gallery-list li:hover a {
+    display: block;
+}

@@ -1,3 +1,34 @@
+/* Inputs */
+.typerocket-container input[type="text"],
+.typerocket-container input[type="email"],
+.typerocket-container input[type="password"],
+.typerocket-container input[type="number"],
+.typerocket-container textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px;
+    margin: 0;
+}
+
+.typerocket-container select {
+    margin: 0 0 5px;
+    padding: 3px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.typerocket-container textarea {
+    min-height: 120px;
+}
+
+.typerocket-container .help p {
+    color: #666;
+    font-style: italic;
+    margin: 4px 0 0;
+    font-size: 13px;
+}
+
+/* Rows */
 .control-section + [class^=control-row],
 [class^=control-row] + .control-section,
 [class^=control-row] + [class^=control-row] {
@@ -49,6 +80,78 @@
     padding-top: 0;
 }
 
+/* Control Sections */
+.typerocket-container .control-section + .control-section {
+    margin-top: 12px;
+    padding-top: 14px;
+}
+
+.typerocket-container .control-section {
+    position: relative;
+}
+
+/* Labels */
+.typerocket-container .control-label {
+    color: #333;
+    display: block;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    height: auto;
+    width: auto;
+    padding-left: 1px;
+    padding-bottom: 4px;
+}
+
+.inside .typerocket-container .control-section:first-child .control-label {
+    margin-top: 10px;
+}
+
+.typerocket-container .control-section .control-label {
+    margin-top: -4px;
+}
+
+.typerocket-container .repeater-inputs .control-label,
+.postbox-container .typerocket-container .control-label {
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+/* Section Top Bar */
+.postbox-container .typerocket-container .control-section + .control-section:after,
+.repeater-inputs .control-section + .control-section:after,
+.tr-frame-fields .control-section + .control-section:after {
+    content: '';
+    display: block;
+    width: 100%;
+    border-top: 1px solid #DFDFDF;
+    border-bottom: 1px solid #fff;
+    position: absolute;
+    padding: 0 12px 0 10px;
+    left: -10px;
+    top: 0;
+}
+
+.tr-frame-fields .control-section + .control-section:after {
+    padding: 0 10px 0;
+}
+
+/* Matrix */
+.matrix-controls {
+    margin-bottom: 20px;
+}
+
+.matrix-controls select {
+    display: inline-block;
+    width: auto;
+    margin: 0 10px 0 0;
+}
+
+.matrix-disabled {
+    opacity: 0.8;
+}
+
+/* Frames, Meta Boxes and Repeaters */
 .tr-frame-fields {
     h1, h2, h3, h4, h5, h6 {
         + [class^=control-row] {
@@ -144,4 +247,40 @@
 
 .inside .typerocket-container [class^=control-row] .control-section:first-child .control-label {
     margin-top: -4px;
+}
+
+/* Maxlength */
+.tr-maxlength {
+    margin-top: 3px;
+    margin-bottom: 6px;
+    color: #666;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.tr-maxlength span {
+    color: #0073aa;
+    font-weight: bold;
+}
+
+/* Sort Helper */
+.tr-repeater-group.ui-sortable-helper,
+.tr-gallery-list li.ui-sortable-helper {
+    opacity: 0.8;
+    cursor: move;
+    overflow: hidden;
+}
+
+body .tr-builder .controls .tr-components li,
+.tr-repeater-fields .tr-repeater-group,
+.tr-gallery-list li,
+.tr-items-list li{
+    &.ui-sortable-placeholder {
+        border: dashed 1px #bbb;
+        visibility: visible !important;
+        background: none;
+        z-index: 1;
+        box-shadow: none;
+    }
 }
