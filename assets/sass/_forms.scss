@@ -118,7 +118,6 @@
 .typerocket-container .repeater-inputs .control-label,
 .postbox-container .typerocket-container .control-label {
     font-size: 12px;
-    margin-bottom: 6px;
 }
 
 /* Section Top Bar
@@ -346,7 +345,7 @@
 
 /* Frames, Meta Boxes and Repeaters
 ----------------------------------------------------------------------- */
-.tr-frame-fields {
+.tr-frame-fields, .repeater-inputs {
     h1, h2, h3, h4, h5, h6 {
         + [class^=control-row] {
             padding-top: 0;
