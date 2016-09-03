@@ -57,10 +57,6 @@
   z-index: 1053;
 }
 
-#redactor-modal-body {
-  padding: 0 10px 10px;
-}
-
 /* Fullscreen
 ----------------------------------------------------------------------- */
 body .redactor-box-fullscreen {
@@ -593,7 +589,7 @@ body .redactor-box-fullscreen {
   font-weight: bold;
 }
 #redactor-modal section {
-  padding: 30px 40px 50px 40px;
+  padding: 0 10px 10px 10px;
 }
 #redactor-modal label {
   color: #333;

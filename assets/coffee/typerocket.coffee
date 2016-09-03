@@ -51,7 +51,9 @@ jQuery(document).ready ($) ->
   add_editor = (obj) ->
     if $.isFunction($.fn.redactor)
       $(obj).find('.typerocket-editor[name]').each ->
-        $(this).redactor()
+        $(this).redactor({
+          formatting: ['p','h1','h2','h3','h4','h5','blockquote','code']
+        })
         return
     return
 
