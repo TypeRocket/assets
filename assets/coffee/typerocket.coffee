@@ -53,7 +53,7 @@ jQuery(document).ready ($) ->
       $(obj).find('.typerocket-editor[name]').each ->
         $(this).redactor({
           formatting: ['p','h1','h2','h3','h4','h5', 'blockquote'],
-          buttons: ['formatting','bold', 'italic', 'deleted', 'unorderedlist','orderedlist', 'link', 'alignment', 'horizontalrule', 'html']
+          buttons: ['formatting','bold','italic','deleted', 'unorderedlist','orderedlist','outdent','indent','link','alignment','horizontalrule','html']
         })
         return
     return
