@@ -1,4 +1,5 @@
-/* Images and Files */
+/* Images and Files
+----------------------------------------------------------------------- */
 .typerocket-container .data-full,
 .typerocket-container .data-full li {
     margin: 0;
@@ -17,7 +18,8 @@
     overflow: hidden;
 }
 
-/* Gallery */
+/* Gallery
+----------------------------------------------------------------------- */
 .typerocket-container .tr-gallery-list .image-picker-placeholder img {
     cursor: move;
 }
@@ -54,8 +56,6 @@
     text-transform: none;
     line-height: 1;
     font-size: 16px;
-
-    /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

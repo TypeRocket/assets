@@ -1,4 +1,5 @@
-/* Function  Helper */
+/* Function  Helper
+----------------------------------------------------------------------- */
 .tr-dev-alert-helper {
     padding: 15px;
     -webkit-box-sizing: border-box;
@@ -19,7 +20,8 @@
     border-radius: 4px;
 }
 
-/* Input Helper */
+/* Input Helper
+----------------------------------------------------------------------- */
 .typerocket-container .dev {
     font-weight: normal;
     display: inline-block;
@@ -74,7 +76,8 @@
     margin-bottom: 10px;
 }
 
-/* Mobile */
+/* Mobile
+----------------------------------------------------------------------- */
 @media screen and (max-width: 782px) {
     #wpbody .control-label .dev {
         display: none;
