@@ -93,7 +93,8 @@
     position: relative;
 }
 
-/* Labels */
+/* Labels
+----------------------------------------------------------------------- */
 .typerocket-container .control-label {
     color: #333;
     display: block;
@@ -131,7 +132,7 @@
     border-top: 1px solid #DFDFDF;
     border-bottom: 1px solid #fff;
     position: absolute;
-    padding: 0 12px 0 10px;
+    padding: 0 10px;
     left: -10px;
     top: 0;
 }
