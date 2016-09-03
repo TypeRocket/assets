@@ -28,16 +28,14 @@ exports.compileTypeRocketAssets = function( public ) {
 			'link.js',
 			'dev.js'
 		], assets + '/typerocket/js/core.js' );
+		mix.scripts(['global.js'], assets + '/typerocket/js/global.js' );
 		mix.sass('typerocket.scss', assets + '/typerocket/css/core.css' );
 
 		// Move Fonts and JS
 		gulp.src( resource + '/fonts/*.{ttf,woff,eof,eot,svg}' )
 			.pipe( gulp.dest( assets + '/typerocket/fonts') );
 
-		gulp.src( resource + '/js/global.js' )
-			.pipe( gulp.dest( assets + '/typerocket/js' ) );
-
-		gulp.src( resource + '/js/redactor.min.js' )
+		gulp.src( resource + '/lib/redactor.min.js' )
 			.pipe( gulp.dest( assets + '/typerocket/js' ) );
 
 		// Reset
