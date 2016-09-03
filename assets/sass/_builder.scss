@@ -82,7 +82,7 @@
           text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
           text-align: center;
           text-decoration: none;
-          color: #A00;
+          color: $delete;
           top: -8px;
           right: -8px;
           z-index: 11;
@@ -102,7 +102,7 @@
           -moz-osx-font-smoothing: grayscale;
 
           &:hover {
-            color: red;
+            color: $delete_hover;
           }
 
           &:before {
@@ -251,7 +251,7 @@
   }
 }
 
-// Plugin
+/* Builder Plugin */
 #tr_page_type_toggle {
   text-align: center;
   clear: both;

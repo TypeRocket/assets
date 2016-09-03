@@ -18,26 +18,30 @@
 
 #tr-seo-preview-google-title {
     display: block;
-    color: #2518B5;
+    color: #1a0dab;
     cursor: pointer;
     font-family: arial, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: normal;
     height: auto;
-    line-height: 19px;
+    line-height: 1.2em;
     list-style-image: none;
     list-style-position: outside;
     list-style-type: none;
     text-align: left;
-    text-decoration: underline;
+    text-decoration: none;
     visibility: visible;
     white-space: nowrap;
     width: auto;
     zoom: 1;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 #tr-seo-preview-google-url {
-    color: #00802A;
+    color: #006621;
     font-family: arial, sans-serif;
     font-size: 14px;
     font-style: normal;
@@ -55,7 +59,7 @@
 }
 
 #tr-seo-preview-google-desc {
-    color: #444;
+    color: #545454;
     display: inline;
     font-family: arial, sans-serif;
     font-size: 13px;

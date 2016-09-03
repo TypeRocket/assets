@@ -14,19 +14,19 @@
     background: #fff;
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
     border-left: solid 4px;
-    border-color: #46b450;
+    border-color: $success;
 }
 
 .typerocket-ajax-alert.tr-alert-error {
-    border-color: #dc3232;
+    border-color: $error;
 }
 
 .typerocket-ajax-alert.tr-alert-warning {
-    border-color: #ffb900;
+    border-color: $warn;
 }
 
 .typerocket-ajax-alert.tr-alert-info {
-    border-color: #00a0d2;
+    border-color: $info;
 }
 
 /* Mobile */

@@ -13,7 +13,7 @@
 .tr-dev-alert-helper code {
     background: rgba(238, 238, 238, 0.35);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
-    color: #3182bd;
+    color: $blue;
     padding: 4px;
     display: inline-block;
     border-radius: 4px;
@@ -64,6 +64,14 @@
 
 .typerocket-container .dev .nav .field {
     margin-left: 5px;
+}
+
+.tr-repeater .tr-repeater .dev {
+    display: none;
+}
+
+.tr-matrix > .dev, .tr-repeater > .dev {
+    margin-bottom: 10px;
 }
 
 /* Mobile */

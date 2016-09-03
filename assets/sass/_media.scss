@@ -61,7 +61,7 @@
 }
 
 .tr-gallery-list a {
-    color: #A00;
+    color: $delete;
     position: absolute;
     right: -8px;
     top: -8px;
@@ -75,7 +75,7 @@
 }
 
 .tr-gallery-list a:hover {
-    color: #f00;
+    color: $delete_hover;
     cursor: pointer;
 }
 
