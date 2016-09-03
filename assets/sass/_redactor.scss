@@ -346,6 +346,7 @@ body .redactor-box-fullscreen {
   z-index: 1054;
   text-align: center;
   top: 0;
+  margin-top: 10px;
   left: 0;
   background: #000;
   color: #fff;
@@ -354,6 +355,17 @@ body .redactor-box-fullscreen {
   font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif !important;
   font-size: 12px;
   border-radius: 2px;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    border: solid 6px transparent;
+    top: -12px;
+    left: 50%;
+    margin-left: -6px;
+    border-bottom-color: #000;
+  }
 }
 /* Dropdown
 ----------------------------------------------------------------------- */
