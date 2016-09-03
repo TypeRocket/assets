@@ -342,6 +342,7 @@ body .redactor-box-fullscreen {
   margin-top: 10px;
   left: 0;
   background: #222;
+  background: rgba(0,0,0,0.8);
   color: #fff;
   padding: 5px 8px;
   line-height: 1;
@@ -358,6 +359,7 @@ body .redactor-box-fullscreen {
     left: 50%;
     margin-left: -6px;
     border-bottom-color: #222;
+    border-bottom-color: rgba(0,0,0,0.8);
   }
 }
 /* Dropdown
