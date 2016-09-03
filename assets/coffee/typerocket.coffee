@@ -50,11 +50,16 @@ jQuery(document).ready ($) ->
 
   add_editor = (obj) ->
     if $.isFunction($.fn.redactor)
+
+      redactorSettings =
+        formatting: ['p','h1','h2','h3','h4','h5', 'blockquote'],
+        buttons: ['formatting','bold','italic','deleted', 'unorderedlist','orderedlist','outdent','indent','link','alignment','horizontalrule','html']
+
+      if ! $.isEmptyObject(window.TypeRocket.redactorSettings)
+        redactorSettings = window.TypeRocket.redactorSettings
+
       $(obj).find('.typerocket-editor[name]').each ->
-        $(this).redactor({
-          formatting: ['p','h1','h2','h3','h4','h5', 'blockquote'],
-          buttons: ['formatting','bold','italic','deleted', 'unorderedlist','orderedlist','outdent','indent','link','alignment','horizontalrule','html']
-        })
+        $(this).redactor( redactorSettings )
         return
     return
 
