@@ -350,6 +350,10 @@
     h1, h2, h3, h4, h5, h6 {
         + [class^=control-row] {
             padding-top: 0;
+
+            .control-section {
+                padding-top: 0 !important;
+            }
         }
     }
 }
