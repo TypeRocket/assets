@@ -81,10 +81,19 @@ jQuery(document).ready(function($) {
     TypeRocket.repeaterCallbacks.push(add_date_picker);
     TypeRocket.repeaterCallbacks.push(add_color_picker);
     TypeRocket.repeaterCallbacks.push(add_editor);
-    $trContainer.on('keyup', 'input[maxlength], textarea[maxlength]', function() {
+    $trContainer.on('input keyup', '.redactor-editor', function () {
+        var $textarea = $(this).siblings('textarea');
+        $textarea.trigger('change');
+    });
+    $trContainer.on('blur keyup change', 'input[maxlength], textarea[maxlength]', function() {
         var $that;
         $that = $(this);
-        $that.next().find('span').text(tr_max.len(this));
+
+        if( $that.parent().hasClass('redactor-box') ) {
+            $that = $that.parent();
+        }
+
+        $that.next().find('span').text( tr_max.len(this) );
     });
     $('.tr-tabs li').each(function() {
         $(this).click(function(e) {
@@ -207,8 +216,10 @@ jQuery(document).ready(function($) {
     tr_max = {
         len: function(that) {
             var $that;
+            var length;
             $that = $(that);
-            return parseInt($that.attr('maxlength')) - ($that.val().length);
+            length = ( $that.val().length );
+            return parseInt($that.attr('maxlength')) - length;
         }
     };
 });
