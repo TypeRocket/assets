@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'typerocket-icons';
-  src:  url('#{$icomoon-font-path}/typerocket-icons.eot?faltak');
-  src:  url('#{$icomoon-font-path}/typerocket-icons.eot?faltak#iefix') format('embedded-opentype'),
-  url('#{$icomoon-font-path}/typerocket-icons.ttf?faltak') format('truetype'),
-  url('#{$icomoon-font-path}/typerocket-icons.woff?faltak') format('woff'),
-  url('#{$icomoon-font-path}/typerocket-icons.svg?faltak#typerocket-icons') format('svg');
+  src:  url('#{$icomoon-font-path}/typerocket-icons.eot?18ee3f');
+  src:  url('#{$icomoon-font-path}/typerocket-icons.eot?18ee3f#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/typerocket-icons.ttf?18ee3f') format('truetype'),
+  url('#{$icomoon-font-path}/typerocket-icons.woff?18ee3f') format('woff'),
+  url('#{$icomoon-font-path}/typerocket-icons.svg?18ee3f#typerocket-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -20,6 +20,8 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -74,11 +76,6 @@
     content: $tr-icon-cogs;
   }
 }
-.tr-icon-bullhorn2 {
-  &:before {
-    content: $tr-icon-bullhorn2;
-  }
-}
 .tr-icon-link {
   &:before {
     content: $tr-icon-link;
@@ -97,11 +94,6 @@
 .tr-icon-magic {
   &:before {
     content: $tr-icon-magic;
-  }
-}
-.tr-icon-truck {
-  &:before {
-    content: $tr-icon-truck;
   }
 }
 .tr-icon-money {
@@ -281,7 +273,7 @@
 }
 .tr-icon-sun {
   &:before {
-    content: $tr-icon-sun-o;
+    content: $tr-icon-sun;
   }
 }
 .tr-icon-moon {
@@ -344,9 +336,9 @@
     content: $tr-icon-car;
   }
 }
-.tr-icon-tree2 {
+.tr-icon-tree {
   &:before {
-    content: $tr-icon-tree2;
+    content: $tr-icon-tree;
   }
 }
 .tr-icon-life-saver {
@@ -789,11 +781,6 @@
     content: $tr-icon-equalizer;
   }
 }
-.tr-icon-equalizer2 {
-  &:before {
-    content: $tr-icon-equalizer2;
-  }
-}
 .tr-icon-gear {
   &:before {
     content: $tr-icon-gear;
@@ -849,11 +836,6 @@
     content: $tr-icon-meter;
   }
 }
-.tr-icon-meter2 {
-  &:before {
-    content: $tr-icon-meter2;
-  }
-}
 .tr-icon-gavel {
   &:before {
     content: $tr-icon-gavel;
@@ -869,11 +851,6 @@
     content: $tr-icon-lab;
   }
 }
-.tr-icon-magnet2 {
-  &:before {
-    content: $tr-icon-magnet2;
-  }
-}
 .tr-icon-trash {
   &:before {
     content: $tr-icon-trash;
@@ -884,9 +861,9 @@
     content: $tr-icon-briefcase;
   }
 }
-.tr-icon-truck2 {
+.tr-icon-truck {
   &:before {
-    content: $tr-icon-truck2;
+    content: $tr-icon-truck;
   }
 }
 .tr-icon-road {
@@ -899,11 +876,6 @@
     content: $tr-icon-accessibility;
   }
 }
-.tr-icon-shield2 {
-  &:before {
-    content: $tr-icon-shield2;
-  }
-}
 .tr-icon-power {
   &:before {
     content: $tr-icon-power;
@@ -914,9 +886,9 @@
     content: $tr-icon-clipboard;
   }
 }
-.tr-icon-tree {
+.tr-icon-node-tree {
   &:before {
-    content: $tr-icon-tree;
+    content: $tr-icon-node-tree;
   }
 }
 .tr-icon-menu {
@@ -1082,11 +1054,6 @@
 .tr-icon-table {
   &:before {
     content: $tr-icon-table;
-  }
-}
-.tr-icon-terminal2 {
-  &:before {
-    content: $tr-icon-terminal2;
   }
 }
 .tr-icon-amazon {
