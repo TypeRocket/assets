@@ -29,10 +29,11 @@
     top: 1px;
 }
 
-
 .typerocket-container .control-section .dev:hover > i,
 .typerocket-container .tr-repeater-group .control-section .dev:hover > i {
-    color: #68823e;
+    color: $blue;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 
 .typerocket-container .control-section:hover .dev .nav,
@@ -61,7 +62,7 @@
 }
 
 .typerocket-container .dev:hover .nav .field {
-    color: #0073aa;
+    color: $blue;
 }
 
 .typerocket-container .dev .nav .field {
