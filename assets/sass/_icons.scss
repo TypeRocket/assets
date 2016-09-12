@@ -279,7 +279,7 @@
     content: $tr-icon-won;
   }
 }
-.tr-icon-sun-o {
+.tr-icon-sun {
   &:before {
     content: $tr-icon-sun-o;
   }
@@ -972,11 +972,6 @@
 .tr-icon-bookmarks {
   &:before {
     content: $tr-icon-bookmarks;
-  }
-}
-.tr-icon-sun {
-  &:before {
-    content: $tr-icon-sun;
   }
 }
 .tr-icon-contrast {
