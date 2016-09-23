@@ -89,7 +89,7 @@
                 } else {
                     use_url = attachment[i].sizes.full.url;
                 }
-                item = $('<li class="image-picker-placeholder"><a href="#remove" class="tr-icon-remove2" title="Remove Image"></a><img src="' + use_url + '"/></li>');
+                item = $('<li class="image-picker-placeholder"><a href="#remove" class="dashicons dashicons-no-alt" title="Remove Image"></a><img src="' + use_url + '"/></li>');
                 $(item).append(field.val(attachment[i].id).attr('name', field.attr('name') + '[]'));
                 $(list).append(item);
                 $(list).find('a').on('click', function(e) {

@@ -46,20 +46,6 @@
     display: block;
 }
 
-.tr-gallery-list a,
-.tr-gallery-list a:before {
-    font-family: 'typerocket-icons';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 .tr-gallery-list a {
     color: $delete;
     position: absolute;
