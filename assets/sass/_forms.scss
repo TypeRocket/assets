@@ -400,6 +400,10 @@
     }
 }
 
+.builder-inputs .tr-tabbed-top .tab-section > [class^=control-row]:first-child {
+    padding-top: 0;
+}
+
 .repeater-inputs
 {
     [class^=control-row] + .control-section:after {

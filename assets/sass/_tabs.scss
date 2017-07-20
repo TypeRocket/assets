@@ -124,55 +124,77 @@
     width: 70%;
 }
 
-#wpbody #poststuff .postbox-container .tr-tabbed-top {
-    margin: -6px -10px -8px -10px;
-    padding: 0 8px 10px;
-    background: #fff;
-    position: relative;
-    border-radius: 0 0 3px 3px;
+#wpbody #poststuff .postbox-container {
+    .tr-tabbed-top {
+        margin: -6px -10px -8px -10px;
+        padding: 0 8px 10px;
+        background: #fff;
+        position: relative;
+        border-radius: 0 0 3px 3px;
+    }
+
+    .tabbed-sections {
+        margin: 0 -10px 15px;
+        padding-bottom: 0;
+    }
 }
 
-.postbox-container .tr-tabbed-top .tabbed-sections .tr-tabs {
-    background: #F5F5F5;
-    padding: 5px 9px 0;
-    margin: 0;
-    overflow: hidden;
-    zoom: 1;
-    line-height: 1em;
-    -webkit-box-shadow: inset 0 -1px 0 0 #d5d5d5;
-    -moz-box-shadow: inset 0 -1px 0 0 #d5d5d5;
-    box-shadow: inset 0 -1px 0 0 #d5d5d5;
+.postbox-container, .builder-inputs {
+    .tr-tabbed-top .tabbed-sections .tr-tabs {
+        background: #F5F5F5;
+        padding: 5px 9px 0;
+        margin: 0;
+        overflow: hidden;
+        zoom: 1;
+        line-height: 1em;
+        -webkit-box-shadow: inset 0 -1px 0 0 #d5d5d5;
+        -moz-box-shadow: inset 0 -1px 0 0 #d5d5d5;
+        box-shadow: inset 0 -1px 0 0 #d5d5d5;
+    }
+
+    .tabbed-sections .tr-tabs li a {
+        margin: 0;
+        float: left;
+        padding: 9px 9px;
+        background: #F1F1F1;
+        text-decoration: none;
+        color: #555;
+        border: 1px solid #d5d5d5;
+        box-shadow: none;
+    }
+
+    .tabbed-sections .tr-tabs li.active a {
+        background: #fff !important;
+        position: relative;
+        border-bottom-color: #fff !important;
+    }
+
+    .tabbed-sections .tr-tabs li {
+        float: left;
+        padding: 0;
+        margin: 0 5px 0 0;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 1em;
+    }
 }
 
-.postbox-container .tabbed-sections .tr-tabs li a {
-    margin: 0;
-    float: left;
-    padding: 9px 9px;
-    background: #F1F1F1;
-    text-decoration: none;
-    color: #555;
-    border: 1px solid #d5d5d5;
-    box-shadow: none;
-}
+.builder-inputs {
+    .tr-tabbed-top .tabbed-sections .tr-tabs {
+        background: #FFF;
+    }
 
-.postbox-container .tabbed-sections .tr-tabs li.active a {
-    background: #fff !important;
-    position: relative;
-    border-bottom-color: #fff !important;
-}
+    .tr-tabbed-top {
+        padding: 0 0 5px;
+        background: #fff;
+        position: relative;
+        border-radius: 0 0 3px 3px;
+    }
 
-.postbox-container .tabbed-sections .tr-tabs li {
-    float: left;
-    padding: 0;
-    margin: 0 5px 0 0;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 1em;
-}
-
-#wpbody #poststuff .postbox-container .tabbed-sections {
-    margin: 0 -10px 15px;
-    padding-bottom: 0;
+    .tabbed-sections {
+        margin: 0 -10px 15px;
+        padding-bottom: 0;
+    }
 }
 
 .tabbed-sections .tr-tabs li a {
