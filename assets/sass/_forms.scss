@@ -349,6 +349,16 @@
     padding-bottom: 15px;
 }
 
+.tr-repeater-group .repeater-inputs > .tr-tabbed-top:only-child {
+    padding-bottom: 0;
+}
+
+#wpwrap, body {
+    .tr-repeater-group .tab-section [class^=control-row]:first-child .control-section {
+        padding-top: 0 !important;
+    }
+}
+
 /* Frames, Meta Boxes and Repeaters
 ----------------------------------------------------------------------- */
 .tr-frame-fields, .repeater-inputs {
