@@ -343,6 +343,12 @@
     margin: 0 0 10px 0;
 }
 
+/* Tabs In Repeaters
+----------------------------------------------------------------------- */
+.tr-repeater-group .repeater-inputs > .tr-tabbed-top {
+    padding-bottom: 15px;
+}
+
 /* Frames, Meta Boxes and Repeaters
 ----------------------------------------------------------------------- */
 .tr-frame-fields, .repeater-inputs {
@@ -362,7 +368,11 @@
 .postbox-container .typerocket-container {
     .control-section + [class^=control-row]:after,
     [class^=control-row] + [class^=control-row]:after,
-    [class^=control-row] + .control-section:after
+    [class^=control-row] + .control-section:after,
+    .tr-tabbed-top + .control-section:after,
+    .tr-tabbed-top + [class^=control-row]:after,
+    [class^=control-row] + .tr-tabbed-top:after,
+    .control-section + .tr-tabbed-top:after
     {
         content: '';
         display: block;
@@ -400,7 +410,10 @@
     }
 }
 
-.builder-inputs .tr-tabbed-top .tab-section > [class^=control-row]:first-child {
+.builder-inputs .tr-tabbed-top .tab-section > [class^=control-row]:first-child,
+.tr-repeater-group .tr-tabbed-top .tab-section > [class^=control-row]:first-child,
+.tr-repeater-group .tr-tabbed-top:first-child .tabbed-sections .tr-tabs
+{
     padding-top: 0;
 }
 

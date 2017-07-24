@@ -139,7 +139,7 @@
     }
 }
 
-.postbox-container, .builder-inputs {
+.postbox-container, .builder-inputs, .tr-repeater-group {
     .tr-tabbed-top .tabbed-sections .tr-tabs {
         background: #F5F5F5;
         padding: 5px 9px 0;
@@ -179,7 +179,7 @@
     }
 }
 
-.builder-inputs {
+.builder-inputs, .tr-repeater-group {
     .tr-tabbed-top .tabbed-sections .tr-tabs {
         background: #FFF;
     }

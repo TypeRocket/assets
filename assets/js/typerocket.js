@@ -46,6 +46,27 @@ jQuery(document).ready(function($) {
             });
         }
     };
+    add_tabs = function(obj) {
+        obj.find('.tr-tabs li').each(function(index) {
+            var old_uid, new_uid, $a_tag, $tab_panel;
+            old_uid = $(this).data('uid');
+            new_uid = new Date().getTime() + 'rtabuid';
+            $a_tag = $(this).find('a');
+            $tab_panel = $($(this).parent().parent().next().children()[index]);
+            $(this).attr('id', $(this).attr('id').replace(old_uid, new_uid) );
+            $a_tag.attr('href', $a_tag.attr('href').replace(old_uid, new_uid) );
+            $tab_panel.attr('id', $tab_panel.attr('id').replace(old_uid, new_uid) );
+
+            $(this).click(function(e) {
+                var $section;
+                $(this).addClass('active').siblings().removeClass('active');
+                $section = $($(this).find('a').attr('href'));
+                $($section).addClass('active').siblings().removeClass('active');
+                editorHeight();
+                e.preventDefault();
+            });
+        });
+    };
     add_color_picker = function(obj) {
         if ($.isFunction($.fn.wpColorPicker)) {
             $(obj).find('.color-picker[name]').each(function() {
@@ -81,6 +102,7 @@ jQuery(document).ready(function($) {
     TypeRocket.repeaterCallbacks.push(add_date_picker);
     TypeRocket.repeaterCallbacks.push(add_color_picker);
     TypeRocket.repeaterCallbacks.push(add_editor);
+    TypeRocket.repeaterCallbacks.push(add_tabs);
     $trContainer.on('input keyup', '.redactor-editor', function () {
         var $textarea = $(this).siblings('textarea');
         $textarea.trigger('change');
