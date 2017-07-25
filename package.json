@@ -1,6 +1,6 @@
 {
   "name": "typerocket-assets",
-  "version": "3.0.0-37",
+  "version": "3.0.0-38",
   "description": "TypeRocket Core Assets",
   "main": "index.js",
   "scripts": {
