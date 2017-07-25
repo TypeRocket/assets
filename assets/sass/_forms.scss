@@ -345,7 +345,7 @@
 
 /* Tabs In Repeaters
 ----------------------------------------------------------------------- */
-.tr-repeater-group .repeater-inputs > .tr-tabbed-top {
+.tr-repeater-group .repeater-inputs > .tr-tabbed-top:not(:only-of-type) {
     padding-bottom: 15px;
 }
 
@@ -394,6 +394,42 @@
         left: -5px;
         top: 0;
     }
+
+    .control-section + .tr-tabbed-top  {
+        margin-top: 9px;
+        padding-top: 0;
+
+        &:after {
+            padding: 0 10px;
+            margin: 0px -5px;
+        }
+    }
+
+    [class^=control-row] + .tr-tabbed-top  {
+        margin-top: 9px;
+        padding-top: 1px;
+
+        &:after {
+            padding: 0 10px;
+            margin: 0px -5px;
+        }
+    }
+
+    .tr-tabbed-top + .control-section {
+        padding-top: 12px;
+
+        &:after {
+            margin: 0px -5px;
+        }
+    }
+
+    .tr-tabbed-top + [class^=control-row] {
+        padding-top: 9px;
+
+        &:after {
+            margin: 0px -5px;
+        }
+    }
 }
 
 .postbox-container .typerocket-container
@@ -433,6 +469,12 @@
     h1:first-child + .tr-tabbed-top {
         .tabbed-sections .tr-tabs {
             padding-top: 0;
+        }
+    }
+
+    h1:first-child + {
+        .control-section, [class^=control-row] {
+            margin-top: 15px;
         }
     }
 }
