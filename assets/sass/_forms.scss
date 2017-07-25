@@ -169,7 +169,7 @@
 
     > h1, > h2, > h3, > h4, > h5, > h6 {
         &:first-child {
-            margin: 0 -10px 15px;
+            margin: 0 -10px 5px;
             padding: 0 12px 8px;
             box-shadow: 0 1px 1px rgba(0,0,0,.04);
             border-bottom: 1px solid #e5e5e5;
@@ -422,9 +422,19 @@
 
 .builder-inputs .tr-tabbed-top .tab-section > [class^=control-row]:first-child,
 .tr-repeater-group .tr-tabbed-top .tab-section > [class^=control-row]:first-child,
-.tr-repeater-group .tr-tabbed-top:first-child .tabbed-sections .tr-tabs
+.tr-repeater-group .tr-tabbed-top:first-child .tabbed-sections .tr-tabs,
+.builder-inputs .tr-tabbed-top:first-child .tabbed-sections .tr-tabs
 {
     padding-top: 0;
+}
+
+.builder-inputs, .tr-repeater-group {
+    .tr-tabbed-top:first-child,
+    h1:first-child + .tr-tabbed-top {
+        .tabbed-sections .tr-tabs {
+            padding-top: 0;
+        }
+    }
 }
 
 .repeater-inputs
