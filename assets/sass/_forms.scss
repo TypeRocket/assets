@@ -479,6 +479,26 @@
     }
 }
 
+.builder-inputs > .tr-tabbed-top + {
+    .control-section {
+        &:after {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    [class^=control-row] {
+        &:after {
+            left: 0;
+            margin-left: -5px;
+            margin-right: -5px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+
+}
+
 .repeater-inputs
 {
     [class^=control-row] + .control-section:after {
