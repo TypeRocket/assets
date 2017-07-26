@@ -47,7 +47,7 @@ jQuery(document).ready(function($) {
         }
     };
     add_tabs = function(obj) {
-        obj.find('.tr-tabbed-top:not(.tr-repeater-group-template .tr-tabbed-top )').each(function() {
+        obj.find('.tr-tabbed-top:not(.tr-repeater-group-template .tr-tabbed-top)').each(function() {
             $(this).find('> .tabbed-sections > .tr-tabs > li').each(function(tab_index) {
                 var old_uid, new_uid, $a_tag, $tab_panel;
                 old_uid = $(this).data('uid');
