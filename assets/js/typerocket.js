@@ -47,23 +47,25 @@ jQuery(document).ready(function($) {
         }
     };
     add_tabs = function(obj) {
-        obj.find('.tr-tabs li').each(function(index) {
-            var old_uid, new_uid, $a_tag, $tab_panel;
-            old_uid = $(this).data('uid');
-            new_uid = new Date().getTime() + 'rtabuid';
-            $a_tag = $(this).find('a');
-            $tab_panel = $($(this).parent().parent().next().children()[index]);
-            $(this).attr('id', $(this).attr('id').replace(old_uid, new_uid) );
-            $a_tag.attr('href', $a_tag.attr('href').replace(old_uid, new_uid) );
-            $tab_panel.attr('id', $tab_panel.attr('id').replace(old_uid, new_uid) );
+        obj.find('.tr-tabbed-top:not(.tr-repeater-group-template .tr-tabbed-top )').each(function() {
+            $(this).find('> .tabbed-sections > .tr-tabs > li').each(function(tab_index) {
+                var old_uid, new_uid, $a_tag, $tab_panel;
+                old_uid = $(this).data('uid');
+                new_uid = new Date().getTime() + 'rtabuid';
+                $a_tag = $(this).find('a');
+                $tab_panel = $($(this).parent().parent().next().children()[tab_index]);
+                $(this).attr('id', $(this).attr('id').replace(old_uid, new_uid) );
+                $a_tag.attr('href', $a_tag.attr('href').replace(old_uid, new_uid) );
+                $tab_panel.attr('id', $tab_panel.attr('id').replace(old_uid, new_uid) );
 
-            $(this).click(function(e) {
-                var $section;
-                $(this).addClass('active').siblings().removeClass('active');
-                $section = $($(this).find('a').attr('href'));
-                $($section).addClass('active').siblings().removeClass('active');
-                editorHeight();
-                e.preventDefault();
+                $(this).click(function(e) {
+                    var $section;
+                    $(this).addClass('active').siblings().removeClass('active');
+                    $section = $($(this).find('a').attr('href'));
+                    $($section).addClass('active').siblings().removeClass('active');
+                    editorHeight();
+                    e.preventDefault();
+                });
             });
         });
     };
