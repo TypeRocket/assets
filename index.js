@@ -1,4 +1,4 @@
-exports.compileTypeRocketAssets = function( public, use_js, use_scss ) {
+exports.compileTypeRocketAssets = function( public, use_js, use_scss, move_files ) {
 	if(typeof use_js === 'undefined') {
 		use_js = [
 			'http.js',
@@ -12,6 +12,10 @@ exports.compileTypeRocketAssets = function( public, use_js, use_scss ) {
 			'link.js',
 			'dev.js'
 		];
+	}
+
+	if(typeof move_files === 'undefined') {
+		move_files = true;
 	}
 
 	if(typeof use_scss === 'undefined') {
@@ -55,11 +59,13 @@ exports.compileTypeRocketAssets = function( public, use_js, use_scss ) {
 		mix.sass(use_scss, assets + '/typerocket/css/core.css' );
 
 		// Move Fonts and JS
-		gulp.src( resource + '/fonts/*.{ttf,woff,eof,eot,svg}' )
+		if(move_files) {
+			gulp.src( resource + '/fonts/*.{ttf,woff,eof,eot,svg}' )
 			.pipe( gulp.dest( assets + '/typerocket/fonts') );
 
-		gulp.src( resource + '/lib/redactor.min.js' )
+			gulp.src( resource + '/lib/redactor.min.js' )
 			.pipe( gulp.dest( assets + '/typerocket/js' ) );
+		}
 
 		// Reset
 		typerocket_elixir.config.assetsPath = originalAssets;
