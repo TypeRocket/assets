@@ -1,4 +1,38 @@
-exports.compileTypeRocketAssets = function( public ) {
+exports.compileTypeRocketAssets = function( public, use_js, use_scss ) {
+	if(typeof use_js === 'undefined') {
+		use_js = [
+			'http.js',
+			'booyah.js',
+			'typerocket.js',
+			'items.js',
+			'media.js',
+			'matrix.js',
+			'builder.js',
+			'seo.js',
+			'link.js',
+			'dev.js'
+		];
+	}
+
+	if(typeof use_scss === 'undefined') {
+		use_scss = [
+			'typerocket.scss',
+			'alert.scss',
+			'builder.scss',
+			'dev.scss',
+			'forms.scss',
+			'icon-vars.scss',
+			'icons.scss',
+			'items.scss',
+			'media.scss',
+			'redactor.scss',
+			'search.scss',
+			'seo.scss',
+			'style-guide.scss',
+			'tabs.scss',
+			'ui-datepicker.scss',
+		];
+	}
 	var typerocket_elixir = require('laravel-elixir');
 	var gulp = require('gulp');
 
@@ -16,20 +50,9 @@ exports.compileTypeRocketAssets = function( public ) {
 		var resource = typerocket_elixir.config.assetsPath;
 
 		// TypeRocket Core Assets
-		mix.scripts([
-			'http.js',
-			'booyah.js',
-			'typerocket.js',
-			'items.js',
-			'media.js',
-			'matrix.js',
-			'builder.js',
-			'seo.js',
-			'link.js',
-			'dev.js'
-		], assets + '/typerocket/js/core.js' );
+		mix.scripts(use_js, assets + '/typerocket/js/core.js' );
 		mix.scripts(['global.js'], assets + '/typerocket/js/global.js' );
-		mix.sass('typerocket.scss', assets + '/typerocket/css/core.css' );
+		mix.sass(use_scss, assets + '/typerocket/css/core.css' );
 
 		// Move Fonts and JS
 		gulp.src( resource + '/fonts/*.{ttf,woff,eof,eot,svg}' )

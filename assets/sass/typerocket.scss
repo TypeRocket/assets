@@ -1,28 +1,4 @@
-/* Branding
------------------------------------------------------------------------ */
-$blue: #3182bd;
-$dark: #085286;
-$light: #5199CC;
-$alt: #FFCB36;
-
-/* WordPress Colors
------------------------------------------------------------------------ */
-$wp_link: #0073aa;
-$wp_button: #0085ba;
-$wp_link_hover: #00a0d2;
-$wp_button_hover: #008ec2;
-
-/* Alerts
------------------------------------------------------------------------ */
-$success: #46b450;
-$error: #dc3232;
-$warn: #ffb900;
-$info: #00a0d2;
-
-/* Controls
------------------------------------------------------------------------ */
-$delete: #A00;
-$delete_hover: #F00;
+@import 'vars.scss';
 
 /* Main Container
 ----------------------------------------------------------------------- */
@@ -94,17 +70,3 @@ $delete_hover: #F00;
 .cf {
     *zoom: 1;
 }
-
-@import 'icons';
-@import 'alert';
-@import 'builder';
-@import 'dev';
-@import 'forms';
-@import 'items';
-@import 'media';
-@import 'redactor';
-@import 'search';
-@import 'seo';
-@import 'style-guide';
-@import 'tabs';
-@import 'ui-datepicker';
