@@ -14,7 +14,7 @@ jQuery.fn.TypeRocketLink = function(type, taxonomy) {
     if (taxonomy) {
         param += '&taxonomy=' + taxonomy;
     }
-    jQuery.getJSON('/wp-json/typerocket/v1/search?' + param, function(data) {
+    jQuery.getJSON(trHelpers.site_uri+'/wp-json/typerocket/v1/search?' + param, function(data) {
         var i, id, item, len, post_status, results, title;
         if (data) {
             that.next().next().next().html('');
